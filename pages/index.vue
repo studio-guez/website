@@ -9,7 +9,6 @@
         >{{name}}</h1>
 
         <a target="_blank" href="mailto:info+website@studio-guez.ch">info@studio-guez.ch</a>
-        <div style="position: absolute; bottom: 2rem; left: 2rem">Graphic & Interaction Design</div>
     </section>
 </template>
 
