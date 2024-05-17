@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
-    baseURL: '/website/',
+    baseURL: '/',
     buildAssetsDir: 'assets',
   },
 })
