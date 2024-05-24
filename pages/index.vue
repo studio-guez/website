@@ -8,7 +8,7 @@
             @click="playAnimation"
         >{{name}}</h1>
 
-        <a target="_blank" href="mailto:info+website@studio-guez.ch">info@studio-guez.ch</a>
+        <a target="_blank" href="mailto:contact+website@studio-guez.ch ">contact@studio-guez.ch</a>
     </section>
 </template>
 
