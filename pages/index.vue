@@ -9,6 +9,11 @@
         >{{name}}</h1>
 
         <a target="_blank" href="mailto:contact+website@studio-guez.ch ">contact@studio-guez.ch</a>
+
+
+      <img src="/coucou.jpg"
+           alt="coucou gipeg"
+      >
     </section>
 </template>
 
@@ -202,6 +207,18 @@ h1 {
     line-height: 1em;
     font-weight: 500;
     text-align: center;
+}
+
+img {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -5;
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: 0 0;
 }
 
 a {
