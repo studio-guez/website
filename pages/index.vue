@@ -8,7 +8,10 @@
             @click="playAnimation"
         >{{name}}</h1>
 
+        <span>Rome ne fut pas faite toute en un jour.</span>
+      <div style="position: fixed; bottom: 2rem">
         <a target="_blank" href="mailto:contact+website@studio-guez.ch ">contact@studio-guez.ch</a>
+      </div>
 
 
       <img src="/coucou.jpg"
