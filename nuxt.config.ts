@@ -5,5 +5,10 @@ export default defineNuxtConfig({
     baseURL: '/',
     buildAssetsDir: 'assets',
   },
-  buildDir: 'docs',
+  ssr: false,
+  nitro: {
+    output: {
+      publicDir: 'docs',
+    },
+  },
 })
