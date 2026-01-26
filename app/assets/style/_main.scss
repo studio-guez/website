@@ -1,0 +1,78 @@
+@use "../../../node_modules/modern-normalize/modern-normalize.css";
+
+@font-face {
+  font-family: 'Printvetica';
+  src: url('/fonts/Printvetica.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --app-header-height: 8rem;
+  --app-gap: 2rem;
+  --app-color-main: #fa3d00;
+}
+
+html {
+  font-family: 'Printvetica', sans-serif;
+  font-size: 10px;
+
+  /* Scrollbar personnalisée pour Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: rgb(196, 196, 196) transparent;
+}
+
+/* Scrollbar personnalisée pour WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(196, 196, 196);
+  border-radius: var(--radius-full);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(196, 196, 196);
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+
+body {
+  font-size: 3rem;
+  line-height: 1.25em;
+  box-sizing: border-box;
+  padding-left: var(--app-gap--big);
+  padding-right: var(--app-gap--big);
+}
+
+a {
+  color: inherit;
+}
+
+h2, .app-font-h2 {
+  font-size: 3rem;
+  line-height: 1.25em;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+p, .app-font-p {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  line-height: 1.25em;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
