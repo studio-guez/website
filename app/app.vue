@@ -4,6 +4,14 @@
     <header class="v-app__header">
       <h1 class="v-app-header__title">studio  guez</h1>
     </header>
+
+    <div class="v-app__content">
+      <h1>vous adresse ses meilleurs voeux pour 2026</h1>
+      <p>studio guez est un bureau de graphisme basé
+        à Genève. Depuis 2023, nous réalisons des projets d’identité visuelle, de sites web, ainsi que d’édition.
+        <br>Contactez nous&nbsp;!</p>
+    </div>
+
     <div class="v-app__background-wrapper">
       <img class="v-app__background-wrapper__img"
            alt="image d'arrière plan avec des verres à cocktail" src="/background-compress.jpg" role="none">
@@ -29,10 +37,23 @@
 
 .v-app-header__title {
   padding: var(--app-gap);
-  margin: 0;
-  color: var(--app-color-main);
-  font-size: 4rem;
-  line-height: 4rem;
+}
+
+.v-app__content {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: var(--app-gap);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @media (max-width: 1200px) {
+    position: relative;
+    padding-top: calc(100vh - 5rem);
+    align-items: flex-start;
+  }
 }
 
 .v-app__background-wrapper {
