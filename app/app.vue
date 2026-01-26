@@ -1,6 +1,11 @@
 <template>
   <main class="v-app"
   >
+    <img alt="cursor"
+         src="/cursor-compress-small.png" role="none"
+         class="v-app__header__cursor"
+         ref="appCursor"
+    >
     <header class="v-app__header">
       <h1 class="v-app-header__title">studio  guez</h1>
     </header>
@@ -24,6 +29,16 @@
 
 <script setup lang="ts">
 
+const appCursor = ref<HTMLElement>()
+
+onMounted(() => {
+  const cursorGap = -50
+
+  addEventListener('mousemove', (evt: MouseEvent) => {
+    appCursor.value!.style.transform = `translate(${evt.clientX + cursorGap}px, ${evt.clientY + cursorGap}px)`
+  })
+})
+
 </script>
 
 
@@ -33,6 +48,18 @@
   top: 0;
   left: 0;
   z-index: 10;
+}
+
+.v-app__header__cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 75px;
+  user-select: none;
+  pointer-events: none;
+  -webkit-user-drag: none;
+  cursor: none !important;
 }
 
 .v-app-header__title {
@@ -67,11 +94,17 @@
   flex-wrap: nowrap;
   z-index: 0;
   padding-top: var(--app-header-height);
+  user-select: none;
+  pointer-events: none;
+  -webkit-user-drag: none;
 }
 
 .v-app__background-wrapper__img {
   height: 100%;
   width: auto;
+  user-select: none;
+  pointer-events: none;
+  -webkit-user-drag: none;
 }
 
 @keyframes bg-animation {
