@@ -19,8 +19,8 @@
     <div class="v-app__content">
       <h1>vous adresse ses meilleurs voeux pour 2026</h1>
       <p>studio guez est un bureau de graphisme basé
-        à Genève. Depuis 2023, nous réalisons des projets d’identité visuelle, de sites web, ainsi que d’édition.
-        <br>Contactez nous&nbsp;!</p>
+        à Genève. Nous réalisons des projets dans la conception d’identités visuelles, de sites web, de projets éditoriaux et de signalétique.
+        <br>Contactez-nous&nbsp;!</p>
     </div>
 
     <div class="v-app__background-wrapper">
