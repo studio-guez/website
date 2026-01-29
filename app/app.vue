@@ -17,10 +17,12 @@
     </header>
 
     <div class="v-app__content">
-      <h1>vous adresse ses meilleurs voeux pour 2026</h1>
-      <p>studio guez est un bureau de graphisme basé
+    <h1>vous adresse ses meilleurs vœux pour 2026</h1>
+    <HtmlContentWithObfuscatedEmail
+      :textHtmlContent="`<p>studio guez est un bureau de graphisme basé
         à Genève. Nous réalisons des projets dans la conception d’identités visuelles, de sites web, de projets éditoriaux et de signalétique.
-        <br>Contactez-nous&nbsp;!</p>
+        <br><a target='_blank' href='mailto:hello@studio-guez.ch' >Contactez-nous&nbsp;!</a></p>`"
+    />
     </div>
 
     <div class="v-app__background-wrapper">
@@ -66,6 +68,7 @@ onMounted(() => {
   pointer-events: none;
   -webkit-user-drag: none;
   cursor: none !important;
+  transform: translate3d(1rem, 2rem, 0);
 }
 
 .v-app-header__title {
