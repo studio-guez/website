@@ -1,0 +1,30 @@
+ariana-001|portrait|1440 1066 720
+ariana-002|landscape|3840 1920 828
+ariana-003|landscape|3840 1920 828
+fc-001|portrait|1524 1129 762
+forpro-001-raphae-lle-mu-ller|landscape|1920 828
+forpro-002-raphae-lle-mu-ller|portrait|1371 1142 771
+forpro-003|landscape|3840 1920 828
+grutli-002|landscape|3840 1920 828
+grutli-003-copie|landscape|3840 1920 828
+grutli-005|portrait|1440 1066 720
+grutli-006|landscape|3840 1920 828
+grutli-007|portrait|1440 1066 720
+guez-001|landscape|3840 1920 828
+guez-002|landscape|3840 1920 828
+ireland-001|landscape|3840 1920 828
+mcba-001|landscape|3840 1920 828
+mcba-003|landscape|3840 1920 828
+modus-001|landscape|3840 1920 828
+modus-002|landscape|3840 1920 828
+modus-003|landscape|3840 1920 828
+modus-004|landscape|3840 1920 828
+mss-001|portrait|1524 1129 762
+plaza-001|portrait|1620 1200 810
+plaza-002-raphae-lle-mu-ller|landscape|1920 828
+plaza-003-raphae-lle-mu-ller|landscape|1920 828
+standardbook-001-raphae-lle-mu-ller|landscape|3543 1920 828
+standardbook-002-raphae-lle-mu-ller|portrait|1543 1142 771
+creatives-001|landscape|3248 1920 828
+grutli-001|landscape|2040 1920 828
+plo-001|landscape|3840 1920 828

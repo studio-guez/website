@@ -1,75 +1,73 @@
-# Nuxt Minimal Starter
+# Studioguez Temporary Slideshow
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+HTML/JS slideshow project using GSAP, Vite, and Tailwind CSS, served via Docker.
 
-## Setup
+## Getting Started
 
-Make sure to install dependencies:
+1. `git clone https://github.com/Octoplus-Solutions/studioguez-temporary-slideshow.git`
+2. `cd studioguez-temporary-slideshow/`
+3. `docker compose up`
 
-```bash
-# npm
-npm install
+## Project Structure
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+```
+├── index.html            # Vite entry HTML
+├── vite.config.js
+├── package.json
+├── Dockerfile            # Multi-stage build (Node → Nginx)
+├── docker-compose.yml
+├── public/               # Static assets (images, fonts, etc.)
+└── src/
+    ├── css/style.css     # Tailwind + custom styles
+    └── js/app.js         # GSAP + app logic
 ```
 
-## Development Server
+## Development
 
-Start the development server on `http://localhost:3000`:
+`docker compose up` starts the Vite dev server with HMR on port 5174.
 
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
+## Production Build
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+docker compose run --rm dev npm run build
 ```
 
-Locally preview production build:
+Builds the app with Vite into the `docs/`.
+
+The output in `docs/` is ready to deploy as-is to any static hosting.
+
+## Access
+
+- Dev server: http://localhost:5174
+- Production: http://localhost:8080 (with `production` profile)
+
+## Image Processing
+
+Drop source images (`.jpg`, `.jpeg`, `.png`) into `public/img/` and run:
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+bash process-images.sh
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+**Requires:** ImageMagick (`convert`, `identify`)
+
+The script will:
+
+1. **Detect orientation** — landscape (width ≥ height) or portrait
+2. **Resize** to 3 breakpoints:
+   - Landscape: 3840px, 1920px, 828px wide
+   - Portrait: 2160px, 1600px, 1080px tall (width computed from aspect ratio)
+   - Never upscales — caps at original dimensions, deduplicates identical sizes
+3. **Export** each size as both `.webp` (q82) and `.jpg` (q85, progressive, stripped metadata)
+4. **Name** files in a web-friendly slug: `My Image_001 (©).jpg` → `my-image-001-{width}w.webp/.jpg`
+5. **Delete** all source files
+6. **Write** `public/img/manifest.txt` — pipe-delimited list of `slug|orientation|widths`
+
+### Manifest format
+
+```
+ariana-001|portrait|1440 1066 720
+ariana-002|landscape|3840 1920 828
+```
+
+Use the manifest to generate `<picture>` elements in `index.html` with `srcset` width descriptors and a `<source type="image/webp">` for modern browsers with `<img>` JPG fallback.
