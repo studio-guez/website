@@ -4,8 +4,8 @@ HTML/JS slideshow project using GSAP, Vite, and Tailwind CSS, served via Docker.
 
 ## Getting Started
 
-1. `git clone https://github.com/Octoplus-Solutions/studioguez-temporary-slideshow.git`
-2. `cd studioguez-temporary-slideshow/`
+1. `git clone https://github.com/studio-guez/website.git`
+2. `cd website/`
 3. `docker compose up`
 
 ## Project Structure
